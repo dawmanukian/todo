@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,67 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  margin: 16px;
+  background: #ccc;
+  max-width: 400px;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.App .todo-header form{
+  display: flex;
+}
+
+.App .todo-header form input {
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 7px 0px 0px 7px;
+  outline: none;
+}
+
+.App .todo-header form button {
+  border: none;
+  border-radius: 0px 7px 7px 0px;
+  cursor: pointer;
+  background: rgb(16, 163, 16);
+  color: #fff;
+}
+.App .todo-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0px 0px 0px;
+}
+.App .todo-footer button {
+  border: none;
+  border-radius: 7px;
+  padding: 7px;
+  cursor: pointer;
+  background: rgb(168, 6, 6);
+  color: #fff;
+}
+.App .todo-item button {
+  border: none;
+  border-radius: 7px;
+  padding: 7px;
+  cursor: pointer;
+  background: rgb(208, 8, 8);
+  color: #fff;
+}
+.App .todo-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px 0px 0px;
+  border-bottom: 1px dashed #b5b5b5;
+  padding: 0px 0px 7px 0px;
+}
+
+label {
+  cursor: pointer;
 }
