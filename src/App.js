@@ -29,6 +29,13 @@ const reducer = (state, action) => {
       return state.filter(el => el.id !== action.payload.id)
     case 'DELETEALLCOMPLETED':
       return state.filter(el => !el.isCompleted)
+    case 'SELECTALL':
+      return state.map(el => {
+        return {
+          ...el,
+          isCompleted: true
+        }
+      })
       
   }
 }
@@ -71,6 +78,11 @@ function App() {
       }}
         allLength={todos.length}
         completedLength={todos.filter(el => el.isCompleted).length}
+        onSelectAll={() => {
+          dispatch({
+            type: 'SELECTALL'
+          })
+        }}
       />
     </div>
   );

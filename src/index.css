@@ -78,3 +78,7 @@ code {
 label {
   cursor: pointer;
 }
+
+.App .todo-footer .select-all {
+  background: rgb(212, 146, 23);
+}
