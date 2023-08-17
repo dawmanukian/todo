@@ -4,7 +4,7 @@ const TodoHeader = ({onAdd}) => {
     const [value, setValue] = useState('');
     const [status, setStatus] = useState(false)
     const todoAdd = () => {
-      if (value !== '') {        
+      if (value.trim() !== '') {        
         onAdd(value)
         setValue('')
         setStatus(false)
